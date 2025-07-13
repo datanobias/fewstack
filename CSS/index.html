@@ -12,6 +12,10 @@
             background: #f4f4f4;
             width: 100%;
             overflow-x: hidden;
+            box-sizing: border-box;
+        }
+        * {
+            box-sizing: border-box;
         }
         header {
             background: #4A90E2;
@@ -19,20 +23,40 @@
             padding: 10px 20px;
             display: flex;
             align-items: center;
-            justify-content: flex-start;
-            gap: 20px;
+            justify-content: space-between;
+            gap: 10px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             width: 100%;
-            flex-wrap: wrap;
+            box-sizing: border-box;
+            min-height: 70px;
         }
         header img {
-            height: 60px;
-            margin-right: 20px;
+            height: 50px;
+            margin-right: 10px;
+            display: block;
+            flex-shrink: 0;
         }
         nav {
             display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
+            gap: 15px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            flex-shrink: 1;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            nav {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            nav a {
+                font-size: 1em;
+            }
         }
         nav a {
             color: #fff;
@@ -61,17 +85,19 @@
             border-radius: 0;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             width: 100%;
+            box-sizing: border-box;
         }
         footer {
             background: #222;
             color: #fff;
             text-align: center;
             padding: 18px 0 12px 0;
-            width: 100vw;
+            width: 100%;
             font-size: 1.1em;
             box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
             position: relative;
             bottom: 0;
+            box-sizing: border-box;
         }
         footer a {
             color: #4A90E2;
@@ -82,10 +108,9 @@
 </head>
 <body>
     <header>
-        <a href="index.html" style="display:inline-block; margin-bottom:10px;">
-            <img src="logo.png" alt="CSS Mastery Logo" style="height:18px; vertical-align:middle;">
-        </a>
-        <h1>CSS Mastery</h1>        
+        <a href="index.html">
+            <img src="assets/logo.svg" alt="CSS Mastery Logo">
+        </a>       
         <nav>
             <a href="home.html">Home</a>
             <a href="products.html">Products</a>
