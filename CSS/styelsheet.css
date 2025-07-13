@@ -1,0 +1,99 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            width: 100%;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        header {
+            background: #4A90E2;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            width: 100%;
+            box-sizing: border-box;
+            min-height: 70px;
+        }
+        header img {
+            height: 50px;
+            margin-right: 10px;
+            display: block;
+            flex-shrink: 0;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            flex-shrink: 1;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            nav {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            nav a {
+                font-size: 1em;
+            }
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #FFD700;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+        h4 {
+            margin-top: 10px;
+            color: #333;
+            text-align: center;
+        }
+        main {
+            padding: 30px;
+            margin: 0;
+            background: #fff;
+            border-radius: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            width: 100%;
+            box-sizing: border-box;
+        }
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 18px 0 12px 0;
+            width: 100%;
+            font-size: 1.1em;
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+            position: relative;
+            bottom: 0;
+            box-sizing: border-box;
+        }
+        footer a {
+            color: #4A90E2;
+            text-decoration: none;
+            margin-left: 10px;
+        }
