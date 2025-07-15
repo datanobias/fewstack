@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deployment Instructions for Hostinger</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Deployment Instructions for Hostinger</h1>
+
+    <h2>Create Hostinger Account</h2>
+    <ol>
+        <li>Sign up at <a href="https://hostinger.com">hostinger.com</a></li>
+        <li>Choose "Shared Hosting" plan (starting at $1.99/mo)</li>
+    </ol>
+
+    <h2>Set Up Hosting</h2>
+    <ol>
+        <li>In control panel, go to <strong>Websites</strong> → <strong>Create Website</strong></li>
+        <li>Select Python as runtime environment</li>
+    </ol>
+
+    <h2>Upload Files via FTP</h2>
+    <p>File structure:</p>
+    <pre>
+public_html/
+   app.py
+   requirements.txt
+   templates/
+       dashboard.html
+    </pre>
+
+    <h2>Configure Python App</h2>
+    <ol>
+        <li>In Hostinger control panel:</li>
+        <ul>
+            <li>Python version: Select latest (3.10+)</li>
+            <li>Application startup file: <code>app.py</code></li>
+            <li>Application root: <code>/public_html</code></li>
+        </ul>
+    </ol>
+
+    <h2>Install Dependencies</h2>
+    <p>In control panel's Python manager:</p>
+    <ul>
+        <li>Add packages: <code>flask</code>, <code>requests</code></li>
+    </ul>
+
+    <h2>Configure Cron Job (for automatic updates)</h2>
+    <ol>
+        <li>In Hostinger's Cron Jobs section:</li>
+        <ul>
+            <li>Command: <code>wget -O - https://yourdomain.com/ >/dev/null 2>&1</code></li>
+            <li>Frequency: Hourly</li>
+        </ul>
+    </ol>
+
+    <h2>Access Your App</h2>
+    <p>Visit your domain to see the dashboard</p>
+
+    <h2>Key Features</h2>
+    <ul>
+        <li><strong>Hosting Optimized</strong>
+            <ul>
+                <li>Lightweight (under 200 lines of code)</li>
+                <li>No database required</li>
+                <li>Minimal dependencies</li>
+                <li>Efficient memory usage</li>
+            </ul>
+        </li>
+        <li><strong>Data Collection</strong>
+            <ul>
+                <li>Reddit API (<code>r/Dentistry</code>)</li>
+                <li>Twitter via RSS (Nitter proxy)</li>
+                <li>Public data only (no authentication needed)</li>
+            </ul>
+        </li>
+        <li><strong>Analysis Engine</strong>
+            <ul>
+                <li>Keyword-based pain point detection</li>
+                <li>Category mapping system</li>
+                <li>Real-time processing</li>
+            </ul>
+        </li>
+        <li><strong>Dashboard</strong>
+            <ul>
+                <li>Responsive Bootstrap design</li>
+                <li>Category organization</li>
+                <li>Source tagging</li>
+                <li>Stats summary</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Customization Options</h2>
+    <ul>
+        <li>Modify <code>KEYWORDS</code> and <code>CATEGORIES</code> dictionaries in <code>app.py</code></li>
+        <li>Adjust data sources in <code>SOURCES</code> configuration</li>
+        <li>Change styling in <code>dashboard.css</code></li>
+        <li>Add new platforms by extending <code>fetch_data()</code></li>
+    </ul>
+
+    <p>This solution provides immediate value to dental practices by:</p>
+    <ul>
+        <li>Identifying common operational frustrations</li>
+        <li>Revealing software pain points</li>
+        <li>Highlighting insurance challenges</li>
+        <li>Tracking emerging industry trends</li>
+    </ul>
+
+    <p>The MVP can be extended with:</p>
+    <ul>
+        <li>Email newsletter integration</li>
+        <li>Advanced NLP analysis</li>
+        <li>Vendor recommendation engine</li>
+        <li>Practice benchmarking</li>
+    </ul>
+</body>
+</html>

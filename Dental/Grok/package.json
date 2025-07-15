@@ -1,0 +1,16 @@
+{
+  "name": "dental-sentiment-analyzer",
+  "version": "1.0.0",
+  "description": "A web app for dental practices to analyze sentiment and generate marketing content",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
